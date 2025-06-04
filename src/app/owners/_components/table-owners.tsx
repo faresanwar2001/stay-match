@@ -3,12 +3,9 @@ import { Input } from "@/components/ui/input";
 import { useState } from "react";
 import { TablePagination } from "@/app/stuff/_components/table-pagination";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export default function TableOwners({ owners }) {
-  // Navigation
-  const {lang} =useParams()
-
   // State
   const [filteredUsers, setFilteredUsers] = useState(owners);
 

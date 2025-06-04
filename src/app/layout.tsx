@@ -16,7 +16,7 @@ export default function HomeLayout() {
         <header className="bg-[#A7E92F] h-12 w-full lg:flex items-center px-4 hidden"></header>
         <HeaderDashboard />
 
-        <div className="ps-5  mt-3">
+        <div className="lg:ps-5 lg:px-0 px-2 mt-3">
           <Outlet />
         </div>
       </div>

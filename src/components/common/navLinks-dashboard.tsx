@@ -25,9 +25,9 @@ export default function NavLinksDashboard() {
     <Dialog>
       <DialogTrigger>
         {/* Add user button */}
-        <AlignJustify />
+        <AlignJustify className="text-[#A7E92F]"/>
       </DialogTrigger>
-      <DialogContent className="top-0 left-0 rounded-none m-0 translate-x-0 translate-y-0 fixed w-[500px]"
+      <DialogContent className="top-0 left-0 rounded-none m-0 translate-x-0 translate-y-0 fixed w-[350px]"
 
 >
         <DialogHeader>
