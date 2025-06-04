@@ -1,22 +1,12 @@
 import { EllipsisVertical, Eye, Trash } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import { TablePagination } from "@/app/stuff/_components/table-pagination";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
-
-export default function TableOwners({ owners }) {
-  // State
-  const [filteredUsers, setFilteredUsers] = useState(owners);
-
-  // Function
-  function searchOwner(value) {
-    const Data = owners.filter((owner) =>
-      owner.name.toLowerCase().includes(value.toLowerCase())
-    );
-
-    setFilteredUsers(Data);
-  }
+type TableOwnersProps={
+owners: ownersDataTypes[]
+}
+export default function TableOwners({ owners }:TableOwnersProps) {
   return (
     <div className="relative overflow-x-auto sm:rounded-lg py-10">
       <div className="flex items-center justify-between mb-5">
@@ -46,7 +36,6 @@ export default function TableOwners({ owners }) {
             type="text"
             placeholder="Search User"
             className="border-[#727272] w-[193px]"
-            onChange={(e) => searchOwner(e.target.value)}
           />
         </div>
       </div>
@@ -81,7 +70,7 @@ export default function TableOwners({ owners }) {
           </tr>
         </thead>
         <tbody>
-          {filteredUsers.map((item) => (
+          {owners.map((item) => (
             <tr
               key={item.id}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"

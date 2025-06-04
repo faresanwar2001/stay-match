@@ -4,7 +4,7 @@ const Information = lazy(()=>import ("./_components/information"));
 
 export default function Stuff() {
    // Variables
-  const DataTable = [
+  const DataTable:Stuff[] = [
     {
       name: "Zsazsa McCleverty",
       userName: "@zmcclevertye",

@@ -1,22 +1,13 @@
 import { EllipsisVertical, Eye, Trash } from "lucide-react";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import { TablePagination } from "@/app/stuff/_components/table-pagination";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Link } from "react-router-dom";
 
-export default function TableCustomers({ customers }) {
-  // State
-  const [filteredUsers, setFilteredUsers] = useState(customers);
-
-  // Function
-  function searchOwner(value) {
-    const Data = customers.filter((customer) =>
-      customer.name.toLowerCase().includes(value.toLowerCase())
-    );
-
-    setFilteredUsers(Data);
-  }
+type CustomersTableProps={
+  customers:ownersDataTypes[]
+}
+export default function TableCustomers({ customers }:CustomersTableProps) {
   return (
     <div className="relative overflow-x-auto sm:rounded-lg py-10">
       <div className="flex items-center justify-between mb-5">
@@ -46,7 +37,6 @@ export default function TableCustomers({ customers }) {
             type="text"
             placeholder="Search User"
             className="border-[#727272] w-[193px]"
-            onChange={(e) => searchOwner(e.target.value)}
           />
         </div>
       </div>
@@ -81,7 +71,7 @@ export default function TableCustomers({ customers }) {
           </tr>
         </thead>
         <tbody>
-          {filteredUsers.map((item) => (
+          {customers.map((item) => (
             <tr
               key={item.id}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"

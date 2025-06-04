@@ -9,7 +9,6 @@ import {
 import { TablePagination } from "./table-pagination";
 import AddUserDialog from "@/components/common/addUser-dialog";
 import { Input } from "@/components/ui/input";
-import { useState } from "react";
 import {
   Select,
   SelectContent,
@@ -17,20 +16,10 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
-
-export default function TableInformation({ users }) {
-  // State
-  const [filteredUsers, setFilteredUsers] = useState(users);
-
-  // Function
-  function searchUser(value) {
-    const Data = users.filter((user) =>
-      user.name.toLowerCase().includes(value.toLowerCase())
-    );
-
-    setFilteredUsers(Data);
-  }
-
+type TableInformationProps={
+  users:Stuff[]
+}
+export default function TableInformation({ users }:TableInformationProps) {
   return (
     <div className="relative overflow-x-auto  sm:rounded-lg py-10">
       <div className="flex items-center justify-between mb-3">
@@ -62,7 +51,6 @@ export default function TableInformation({ users }) {
             type="text"
             placeholder="Search User"
             className="border-[#727272] w-[193px]"
-            onChange={(e) => searchUser(e.target.value)}
           />
         </div>
         <Select>
@@ -109,7 +97,7 @@ export default function TableInformation({ users }) {
           </tr>
         </thead>
         <tbody>
-          {filteredUsers.map((item) => (
+          {users.map((item) => (
             <tr
               key={item.email}
               className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200 hover:bg-gray-50 dark:hover:bg-gray-600"

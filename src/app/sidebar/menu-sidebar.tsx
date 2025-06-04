@@ -1,4 +1,4 @@
-import { NavLink, useParams } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import HeadingSidebar from "./heading-sidebar";
 import { Play } from "lucide-react";
 
