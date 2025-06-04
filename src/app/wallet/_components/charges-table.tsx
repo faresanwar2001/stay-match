@@ -1,7 +1,9 @@
 import { Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-
-export default function ChargesTable({ charges }) {
+type ChargesProps={
+  charges:Charges[]
+}
+export default function ChargesTable({ charges }:ChargesProps) {
   return (
     <div>
     {/* Heading */}

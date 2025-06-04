@@ -7,5 +7,10 @@ declare type ownersDataTypes={
   revenues:string;
   noProperties:string;
   status:string
+}
 
+declare type OwnerCustomers={
+    date:string;
+    amount:string;
+    percentage:string;
 }

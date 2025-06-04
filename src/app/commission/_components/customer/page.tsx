@@ -8,29 +8,27 @@ type CommissionCustomerProps = {
   setCommission: () => void;
 };
 
-type CustomersAndOwners = { date: string; amount: string; Percentage: string };
-
 export default function CommissionCustomer({
   commission,
   setCommission,
 }: CommissionCustomerProps) {
   // Variables
-  const customerData: CustomersAndOwners[] = [
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
-    { date: "15-11-2024", amount: "1300 EGP", Percentage: "10%" },
+  const customerData: OwnerCustomers[] = [
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
+    { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },
   ];
 
   return (

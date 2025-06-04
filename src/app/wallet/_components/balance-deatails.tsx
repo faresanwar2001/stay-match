@@ -3,17 +3,17 @@ import { BadgeDollarSign, FolderClosed, WalletCards } from "lucide-react";
 export default function BalanceDetails() {
   // Variables
   const balanceData = [
-    { balance: "EGP 2,000", title: "Review", icon: <FolderClosed /> },
-    { balance: "EGP 2,000", title: "Review", icon: <FolderClosed /> },
-    { balance: "EGP 2,000", title: "Review", icon: <BadgeDollarSign /> },
-    { balance: "EGP 2,000", title: "Review", icon: <WalletCards /> },
+    { id:1,balance: "EGP 2,000", title: "Review", icon: <FolderClosed /> },
+    { id:2,balance: "EGP 2,000", title: "Review", icon: <FolderClosed /> },
+    { id:3,balance: "EGP 2,000", title: "Review", icon: <BadgeDollarSign /> },
+    { id:4,balance: "EGP 2,000", title: "Review", icon: <WalletCards /> },
   ];
 
   return (
     <div className="grid grid-cols-4 gap-5">
       {balanceData.map((item) => (
         <div
-          key={item.icon}
+          key={item.id}
           className="shadow-md rounded-md py-10 px-5 flex justify-between items-center"
         >
           <div className="flex flex-col gap-1">

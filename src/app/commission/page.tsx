@@ -1,7 +1,6 @@
 import { Suspense, useState } from "react";
 import CommissionOwners from "./_components/owner/page";
 import CommissionCustomer from "./_components/customer/page";
-import SwitchCommission from "./switch-commission";
 export default function Commission() {
   // State
   const [commission, setCommission] = useState<

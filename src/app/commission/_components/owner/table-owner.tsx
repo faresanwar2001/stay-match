@@ -1,4 +1,7 @@
-export default function TableOwners({customers}) {
+type CustomersProps={
+  customers:OwnerCustomers[]
+}
+export default function TableOwners({customers}:CustomersProps) {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -29,7 +32,7 @@ export default function TableOwners({customers}) {
             <td className="px-6 py-4">{customer.amount}</td>
 
             {/* Percentage */}
-            <td className="px-6 py-4">{customer.Percentage}</td>
+            <td className="px-6 py-4">{customer.percentage}</td>
           </tr>)}
           
         </tbody>

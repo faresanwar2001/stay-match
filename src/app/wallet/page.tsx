@@ -7,7 +7,7 @@ import WithrowTable from "./_components/withrow.table";
 
 export default function Wallet() {
   // Variables
-  const chargesTable =[
+  const chargesTable:Charges[] =[
     {id:"#5089", issuedDate:"09 May 2020", amount:"EGP3077", balance:"EGP3077", status:"paid"},
     {id:"#5089", issuedDate:"09 May 2020", amount:"EGP3077", balance:"EGP3077", status:"paid"},
     {id:"#5089", issuedDate:"09 May 2020", amount:"EGP3077", balance:"EGP3077", status:"paid"},

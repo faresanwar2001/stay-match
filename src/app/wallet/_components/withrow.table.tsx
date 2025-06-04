@@ -1,7 +1,9 @@
 import { Eye } from "lucide-react";
 import { Link } from "react-router-dom";
-
-export default function WithrowTable({ withrow }) {
+type WithrowProps={
+  withrow:Charges[]
+}
+export default function WithrowTable({ withrow }:WithrowProps) {
   return (
     <div >
     {/* Heading */}
