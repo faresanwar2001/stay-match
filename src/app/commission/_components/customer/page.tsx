@@ -3,15 +3,15 @@ import TableCustomers from "./table-customers";
 import SwitchCommission from "../../switch-commission";
 import CalculateCustomers from "./culculate-customers";
 
-type CommissionCustomerProps = {
-  commission: "commissionCustomer" | "commissionOwners";
-  setCommission: () => void;
+type CommissionProps = {
+  commission: "commissionOwners" | "commissionCustomer";
+  setCommission: React.Dispatch<React.SetStateAction<"commissionOwners" | "commissionCustomer">>;
 };
 
 export default function CommissionCustomer({
   commission,
   setCommission,
-}: CommissionCustomerProps) {
+}: CommissionProps) {
   // Variables
   const customerData: OwnerCustomers[] = [
     { date: "15-11-2024", amount: "1300 EGP", percentage: "10%" },

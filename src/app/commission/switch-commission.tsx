@@ -1,6 +1,11 @@
 import { Switch } from "@/components/ui/switch";
 
-export default function SwitchCommission({ commission, setCommission }) {
+type SwitchCommissionProps = {
+  commission: "commissionOwners" | "commissionCustomer";
+  setCommission: React.Dispatch<React.SetStateAction<"commissionOwners" | "commissionCustomer">>;
+};
+
+export default function SwitchCommission({ commission, setCommission }: SwitchCommissionProps) {
   const toggleCommission = () => {
     setCommission(
       commission === "commissionOwners" ? "commissionCustomer" : "commissionOwners"
@@ -20,7 +25,7 @@ export default function SwitchCommission({ commission, setCommission }) {
             backgroundColor: "#A7E92F",
             width: "32px",
             height: "18px",
-            cursor:"Pointer"
+            cursor: "pointer",
           }}
         />
 
