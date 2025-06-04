@@ -71,7 +71,7 @@ export default function OwnersCustomers() {
           <img
             src="/images/illustration-2.png.png"
             alt="illustration"
-            className="absolute lg:right-20 right-0 bottom-0"
+            className="absolute lg:right-20 right-3 bottom-0"
           />
         </div>
       </div>
