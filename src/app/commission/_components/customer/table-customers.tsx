@@ -1,4 +1,5 @@
-export default function TableCustomers({ customers }) {
+declare type CustomersAndOwners ={date:string; amount:string;Percentage:string}
+export default function TableCustomers({ customers }:any) {
   return (
     <div className="relative overflow-x-auto shadow-md sm:rounded-lg">
       <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
@@ -21,7 +22,7 @@ export default function TableCustomers({ customers }) {
           </tr>
         </thead>
         <tbody>
-          {customers.map((customer) => (
+          {customers.map((customer:CustomersAndOwners) => (
             <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
               {/* Date */}
               <th

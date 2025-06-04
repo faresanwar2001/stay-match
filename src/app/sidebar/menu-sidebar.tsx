@@ -3,8 +3,7 @@ import HeadingSidebar from "./heading-sidebar";
 import { Play } from "lucide-react";
 
 export default function MenuSidebar() {
-  const { lang } = useParams();
-
+  // Variables
   const links = [
     { title: "Dashboard", href: "/" },
     { title: "Stuff", href: "stuff" },

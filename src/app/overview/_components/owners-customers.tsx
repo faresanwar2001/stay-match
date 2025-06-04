@@ -28,7 +28,7 @@ export default function OwnersCustomers() {
         <div className="bg-white shadow-md rounded-md p-5 w-full flex">
           <div>
             {dataOwners.map(({ title, quantity }) => (
-              <div key={title} className="flex justify-between gap-40 py-2">
+              <div key={title} className="flex justify-between lg:gap-40 gap-20 py-2">
                 {/* Title */}
                 <p className="text-gray-600">{title}</p>
 
@@ -43,7 +43,7 @@ export default function OwnersCustomers() {
           <img
             src="/images/illustration-1.png.png"
             alt="illustration"
-            className="absolute right-20 bottom-0"
+            className="absolute lg:right-20 right-0 bottom-0"
           />
         </div>
       </div>
@@ -57,7 +57,7 @@ export default function OwnersCustomers() {
         <div className="bg-white shadow-md rounded-md p-5 w-full flex items-start relative">
           <div>
             {dataCustomers.map(({ title, quantity }) => (
-              <p key={title} className="flex justify-between py-2 gap-40">
+              <p key={title} className="flex justify-between py-2 lg:gap-40 gap-20">
                 {/* Title */}
                 <span className="text-gray-600">{title}</span>
 
@@ -71,7 +71,7 @@ export default function OwnersCustomers() {
           <img
             src="/images/illustration-2.png.png"
             alt="illustration"
-            className="absolute right-20 bottom-0"
+            className="absolute lg:right-20 right-0 bottom-0"
           />
         </div>
       </div>

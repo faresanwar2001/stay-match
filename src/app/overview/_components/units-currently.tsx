@@ -35,7 +35,7 @@ export default function UnitsCurrently() {
           </Avatar>
 
           {/* Title & Date */}
-          <div className="mr-35">
+          <div className="lg:mr-35 mr-12">
             {/* Title */}
             <h3>{title}</h3>
 

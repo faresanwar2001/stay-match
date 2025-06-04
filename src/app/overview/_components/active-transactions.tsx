@@ -7,7 +7,7 @@ export default function ActiveTransactions() {
       <h2 className="font-medium mb-2">Active Transactions</h2>
 
       {/* Description */}
-      <p className="text-[#A3A2A6] text-[18px] mb-4">
+      <p className="text-[#A3A2A6] lg:text-[18px] text-sm  mb-4">
         This transactions will change Automatically By Users Activity
       </p>
 
