@@ -1,4 +1,8 @@
 {
     "owners":"Owners",
-    "customers":"Customers"
+    "customers":"Customers",
+    "user-name":"User Name",
+    "password":"Password",
+    "login":"Login",
+    "type-your-password-user":"Type Your User Name & Password"
 }

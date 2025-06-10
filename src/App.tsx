@@ -6,7 +6,6 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import LoginForm from "./components/features/auth/login/login-form";
-import HomeLayout from "./app/layout";
 import Overview from "./app/overview/page";
 import Stuff from "./app/stuff/page";
 import Owners from "./app/owners/page";
@@ -20,6 +19,8 @@ import enMessages from "./i18n/en.json";
 import arMessages from "./i18n/ar.json";
 import { IntlProvider } from "use-intl";
 import Error from "./Error";
+import AppLayout from "./AppLayout";
+import HomeLayout from "./app/layout";
 
 // Translation
 const messages = {
@@ -54,60 +55,67 @@ const routes = createBrowserRouter([
     path: "/:lang",
     element: (
       <LocalWrapper>
-        <HomeLayout />
+        <AppLayout />
       </LocalWrapper>
     ),
     children: [
       {
-        index: true,
-        element: <Overview />,
-        errorElement: <Error />,
+        path: "",
+        element: <HomeLayout />,
+        children: [
+          {
+            index: true,
+            element: <Overview />,
+            errorElement: <Error />,
+          },
+          {
+            path: "stuff",
+            element: <Stuff />,
+            errorElement: <Error />,
+          },
+          {
+            path: "owners",
+            element: <Owners />,
+            errorElement: <Error />,
+          },
+          {
+            path: "owners/ownerDetails/:id",
+            element: <OwnerDetails />,
+            errorElement: <Error />,
+          },
+          {
+            path: "ownerDetails/editOwner",
+            element: <EditOwner />,
+            errorElement: <Error />,
+          },
+          {
+            path: "customers",
+            element: <Customers />,
+            errorElement: <Error />,
+          },
+          {
+            path: "wallet",
+            element: <Wallet />,
+            errorElement: <Error />,
+          },
+          {
+            path: "support",
+            element: <Support />,
+            errorElement: <Error />,
+          },
+          {
+            path: "Commission",
+            element: <Commission />,
+            errorElement: <Error />,
+          },
+        ],
       },
+
       {
-        path: "stuff",
-        element: <Stuff />,
-        errorElement: <Error />,
-      },
-      {
-        path: "owners",
-        element: <Owners />,
-        errorElement: <Error />,
-      },
-      {
-        path: "owners/ownerDetails/:id",
-        element: <OwnerDetails />,
-        errorElement: <Error />,
-      },
-      {
-        path: "ownerDetails/editOwner",
-        element: <EditOwner />,
-        errorElement: <Error />,
-      },
-      {
-        path: "customers",
-        element: <Customers />,
-        errorElement: <Error />,
-      },
-      {
-        path: "wallet",
-        element: <Wallet />,
-        errorElement: <Error />,
-      },
-      {
-        path: "support",
-        element: <Support />,
-        errorElement: <Error />,
-      },
-      {
-        path: "Commission",
-        element: <Commission />,
-        errorElement: <Error />,
+        path: "login",
+        element: <LoginForm />,
       },
     ],
-  },
-  {
-    path: "login",
-    element: <LoginForm />,
   },
 ]);
 

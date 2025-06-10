@@ -1,4 +1,8 @@
 {
     "owners":"المالكين",
-    "customers":"العملاء"
+    "customers":"العملاء",
+    "user-name":"اسم المستخدم",
+    "password":"كلمة السر",
+    "login":"تسجيل الدخول",
+    "type-your-password-user":"اكتب اسم المستخدم وكلمة المرور الخاصة بك"
 }

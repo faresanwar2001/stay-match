@@ -6,8 +6,12 @@ import { Input } from "@/components/ui/input";
 import { useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import HeadingForm from "./heading-form";
+import { useTranslations } from "use-intl";
 
 export default function LoginForm() {
+  // Translation
+  const t = useTranslations()
+
   // Navigation
   const router = useNavigate();
 
@@ -40,14 +44,14 @@ export default function LoginForm() {
       <div className="lg:w-1/2 w-full flex flex-col justify-center items-center">
         {/* Logo */}
         <div className="mb-30 flex ">
-          <img src="/images/auth-logo.png" alt="Auth Logo" className="w-75 h-68" />
+          <img src="/images/auth-logo.png" alt="Auth Logo" className="lg:w-75 w-55 lg:h-68 h-55" />
         </div>
 
         {/* Login form */}
         <Form {...form}>
           {/* Heading */}
-          <h2 className="font-base text-3xl mb-7">
-            Type Your User Name & Password
+          <h2 className="font-base lg:text-3xl text-2xl mb-7">
+            {t("type-your-password-user")}
           </h2>
 
           <form onSubmit={form.handleSubmit(onSubmit)}>
@@ -61,8 +65,8 @@ export default function LoginForm() {
                   <Input
                     {...field}
                     type="text"
-                    placeholder="User Name"
-                    className="py-6 border-[#727272] w-110"
+                    placeholder={t("user-name")}
+                    className="py-6 border-[#727272] lg:w-110 w-90"
                   />
 
                   {/* Message */}
@@ -81,8 +85,8 @@ export default function LoginForm() {
                   <Input
                     {...field}
                     type="password"
-                    placeholder="Password"
-                    className="py-6 border-[#727272]"
+                    placeholder={t("password")}
+                    className="py-6 border-[#727272] lg:w-110 w-90"
                   />
 
                   {/* Message */}
@@ -93,7 +97,7 @@ export default function LoginForm() {
 
             {/* Login button */}
             <Button className="w-full text-white font-base py-6 text-xl bg-[#A7E92F]">
-              Login
+              {t("login")}
             </Button>
           </form>
         </Form>
