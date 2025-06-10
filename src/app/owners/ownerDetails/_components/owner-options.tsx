@@ -3,7 +3,7 @@ import { BadgeDollarSign, Gift, MessageSquare, Star } from "lucide-react";
 
 export default function OwnerOptions() {
   return (
-    <div className="grid grid-cols-2 gap-4">
+    <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-4">
       {/* Wallet Balance */}
       <div className="shadow-md rounded-md p-5">
         <div className="flex justify-between items-center">

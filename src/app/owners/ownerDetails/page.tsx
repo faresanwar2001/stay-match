@@ -6,14 +6,14 @@ export default function OwnerDetails() {
   return (
     <Suspense fallback={"loading.........."}>
       <div>
-        <section className="flex gap-4">
+        <section className="flex lg:flex-row flex-col gap-4">
           {/* Owner details */}
-          <div className="w-[30%]">
+          <div className="lg:w-[30%] w-full">
             <OwnerInformation />
           </div>
         
           {/* Owner options */}
-          <div className="w-[70%]">
+          <div className="lg:w-[70%] w-full">
             <OwnerOptions />
           </div>
         </section>
