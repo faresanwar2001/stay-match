@@ -8,7 +8,7 @@ export default function Information() {
     ]
 
   return (
-    <section className="grid grid-cols-2 gap-6 w-full">
+    <section className="grid lg:grid-cols-2 grid-cols-1 gap-6 w-full">
         {info.map(({total, title, desc})=><div key={total} className="shadow-md rounded-md p-5">
             {/* Total */}
             <h5 className="text-[#6D6777] mb-6">{total}</h5>
