@@ -10,7 +10,7 @@ export default function BalanceDetails() {
   ];
 
   return (
-    <div className="grid grid-cols-4 gap-5">
+    <div className="grid lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1 gap-5">
       {balanceData.map((item) => (
         <div
           key={item.id}

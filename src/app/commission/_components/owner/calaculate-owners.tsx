@@ -37,7 +37,7 @@ export default function CalculateOwners() {
                     {...field}
                     defaultValue={"1000"}
                     type="text"
-                    className="border text-4xl font-medium text-[#A7E92F] w-[132px] h-[51px] border-[#6D6777]"
+                    className="border text-4xl font-medium text-[#A7E92F] lg:w-[132px] w-[90px] h-[51px] border-[#6D6777]"
                   />
                 </FormItem>
               )}
@@ -56,7 +56,7 @@ export default function CalculateOwners() {
                     {...field}
                     defaultValue={"10%"}
                     type="text"
-                    className="border text-4xl font-medium text-[#A7E92F] w-[132px] h-[51px] border-[#6D6777]"
+                    className="border text-4xl font-medium text-[#A7E92F] lg:w-[132px] w-[90px]  h-[51px] border-[#6D6777]"
                   />
                 </FormItem>
               )}
@@ -65,7 +65,7 @@ export default function CalculateOwners() {
         </Form>
       </div>
 
-      <div className="flex flex-col gap-5 w-[50%]">
+      <div className="flex flex-col gap-5 lg:w-[50%] w-full">
         {/* Duration button */}
         <Select>
           <SelectTrigger className="w-[100%] text-center cursor-pointer font-medium text-base flex items-center justify-center">

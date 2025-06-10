@@ -24,7 +24,7 @@ export default function Wallet() {
       {/* Balance Details */}
       <BalanceDetails/>
 
-      <div className="grid grid-cols-2 gap-10 mt-10">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 mt-10">
         {/* Bank details */}
         <BankDetails/>
 
@@ -32,7 +32,7 @@ export default function Wallet() {
         <WalletDetails/>
       </div>
 
-      <div className="grid grid-cols-2 gap-10 mt-10">
+      <div className="grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-10 mt-10">
       {/* Charges table */}
       <ChargesTable charges={chargesTable}/>
 

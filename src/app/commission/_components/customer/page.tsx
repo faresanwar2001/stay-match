@@ -34,9 +34,9 @@ export default function CommissionCustomer({
   return (
     <Suspense fallback={"loading......"}>
       {/* Heading */}
-      <h1 className="font-medium text-3xl">Customer Commission Plans</h1>
+      <h1 className="font-medium lg:text-3xl text-2xl">Customer Commission Plans</h1>
 
-      <div className="grid grid-cols-2">
+      <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-0 gap-10">
         <div>
           {/* Switch commission */}
           <SwitchCommission
