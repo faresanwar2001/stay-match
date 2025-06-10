@@ -8,7 +8,8 @@ export default function WithrowTable({ withrow }:WithrowProps) {
     <div >
     {/* Heading */}
     <h2 className="text-2xl font-medium mb-2">Withrow</h2>
-    <table className="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-3">
+    <div className="overflow-x-auto">
+    <table className="w-full overflow-x-auto text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mt-3">
       <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
         <tr>
           <th scope="col" className="px-6 py-3">
@@ -74,6 +75,7 @@ export default function WithrowTable({ withrow }:WithrowProps) {
         ))}
       </tbody>
     </table>
+    </div>
     </div>
   );
 }
