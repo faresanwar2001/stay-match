@@ -24,7 +24,7 @@ export default function TableInformation({ users }:TableInformationProps) {
     <div className="relative overflow-x-auto sm:rounded-lg py-10 px-2">
   <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-5">
     
-    {/* Left: Show entries */}
+    {/* Entries */}
     <div className="flex flex-wrap items-center gap-2">
       <span>Show</span>
       <Select>
@@ -39,7 +39,7 @@ export default function TableInformation({ users }:TableInformationProps) {
       <span>entries</span>
     </div>
 
-    {/* Center: Role filter (optional) */}
+    {/* Role */}
     <div className="md:hidden flex">
       <Select>
         <SelectTrigger className="w-full">
