@@ -16,7 +16,7 @@ type TableOwnersProps = {
 export default function TableOwners({ owners }: TableOwnersProps) {
   return (
     <div className="relative overflow-x-auto sm:rounded-lg py-10">
-      {/* Header: Show Entries & Search */}
+      {/* Show Entries & Search */}
       <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-5">
         {/* Show Entries */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2">
