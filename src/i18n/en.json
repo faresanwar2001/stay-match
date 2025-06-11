@@ -1,8 +1,16 @@
 {
+    "welcome":"Welcome",
     "owners":"Owners",
     "customers":"Customers",
     "user-name":"User Name",
     "password":"Password",
     "login":"Login",
-    "type-your-password-user":"Type Your User Name & Password"
+    "type-your-password-user":"Type Your User Name & Password",
+    "dashboard":"Dashboard",
+    "wallet":"Wallet",
+    "stuff":"Stuff",
+    "commission":"Commission",
+    "support":"Support",
+    "owners-reviews":"Owners Reviews",
+    "customers-reviews":"Customers Reviews"
 }

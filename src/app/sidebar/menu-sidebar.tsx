@@ -1,19 +1,24 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import HeadingSidebar from "./heading-sidebar";
 import { Play } from "lucide-react";
+import { useTranslations } from "use-intl";
 
 export default function MenuSidebar() {
+  // Translation
+  const t = useTranslations();
+  const { lang } = useParams();
+
   // Variables
   const links = [
-    { title: "Dashboard", href: "/" },
-    { title: "Stuff", href: "stuff" },
-    { title: "Owners", href: "owners" },
-    { title: "Customers", href: "customers" },
-    { title: "Wallet", href: "wallet" },
-    { title: "Support", href: "support" },
-    { title: "Commission", href: "Commission" },
-    { title: "Owner Reviews", href: "ownerReviews" },
-    { title: "Customers Reviews", href: "customersReviews" },
+    { title: t("dashboard"), href: "/" },
+    { title: t("stuff"), href: "stuff" },
+    { title: t("owners"), href: "owners" },
+    { title: t("customers"), href: "customers" },
+    { title: t("wallet"), href: "wallet" },
+    { title: t("support"), href: "support" },
+    { title: t("commission"), href: "Commission" },
+    { title: t("owners-reviews"), href: "ownerReviews" },
+    { title: t("customers-reviews"), href: "customersReviews" },
   ];
 
   return (
@@ -27,14 +32,16 @@ export default function MenuSidebar() {
             to={href}
             className={({ isActive }) =>
               `border-b p-1.5 text-2xl flex items-center justify-between ${
-                isActive && "bg-white text-[#A7E92F] pl-3" 
+                isActive && "bg-white text-[#A7E92F] pl-3"
               }`
             }
           >
             {({ isActive }) => (
               <>
                 <span>{title}</span>
-                {isActive && <Play />}
+                {isActive && (
+                  <Play className={`${lang === "ar" ? "scale-x-[-1]" : ""}`} />
+                )}
               </>
             )}
           </NavLink>

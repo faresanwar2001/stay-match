@@ -1,8 +1,16 @@
 {
+    "welcome":"مرحبا",
     "owners":"المالكين",
     "customers":"العملاء",
     "user-name":"اسم المستخدم",
     "password":"كلمة السر",
     "login":"تسجيل الدخول",
-    "type-your-password-user":"اكتب اسم المستخدم وكلمة المرور الخاصة بك"
+    "type-your-password-user":"اكتب اسم المستخدم وكلمة المرور الخاصة بك",
+    "dashboard":"لوحة التحكم",
+    "wallet":"المحفظة",
+    "stuff":"الموظفين",
+    "commission":"عموله",
+    "support":"الدعم",
+    "owners-reviews":"تقييمات المالكين",
+    "customers-reviews":"تقييمات العملاء"
 }
