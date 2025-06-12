@@ -1,6 +1,10 @@
+import { useParams } from "react-router-dom";
 import { useTranslations } from "use-intl";
 
 export default function OwnersCustomers() {
+  // Navigation
+  const {lang} = useParams()
+
   // Translation
   const t = useTranslations();
 
@@ -33,7 +37,7 @@ export default function OwnersCustomers() {
                 <p className="text-gray-600">{title}</p>
 
                 {/* Quantity */}
-                <p className="ml-auto font-semibold text-xl text-gray-800 pe-10">
+                <p className="ms-auto font-semibold text-xl text-gray-800 pe-10">
                   {quantity}
                 </p>
               </div>
@@ -43,7 +47,7 @@ export default function OwnersCustomers() {
           <img
             src="/images/illustration-1.png.png"
             alt="illustration"
-            className="absolute lg:right-20 right-0 bottom-0"
+            className={`absolute ${lang === "en" ? "lg:right-20 right-0":"lg:left-20 left-0"}  bottom-0`}
           />
         </div>
       </div>
@@ -62,7 +66,7 @@ export default function OwnersCustomers() {
                 <span className="text-gray-600">{title}</span>
 
                 {/* Quantity */}
-                <span className="ml-auto font-semibold text-xl text-gray-800">
+                <span className="ms-auto font-semibold text-xl text-gray-800">
                   {quantity}
                 </span>
               </p>
@@ -71,7 +75,7 @@ export default function OwnersCustomers() {
           <img
             src="/images/illustration-2.png.png"
             alt="illustration"
-            className="absolute lg:right-20 right-3 bottom-0"
+            className={`absolute ${lang === "en" ? "lg:right-20 right-0":"lg:left-20 left-0"}  bottom-0`}
           />
         </div>
       </div>
